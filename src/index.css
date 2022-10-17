@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+
+:root {
+  --light-purple: #e0bbe4;
+  --purple: #957dad;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: var(--light-purple);
+}
+
+.searchbar input {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 0.25rem;
+  background-color: transparent;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+}
+
+.feed {
+  background-color: var(--purple);
+}
+
+.feed-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.movie-card {
+  margin: 1rem;
+  width: 20%;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.img-container {
+  height: 300px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--light-purple);
+  width: 200px;
+  height: 3.5rem;
+  border-radius: 8px;
+}
+
+.info h1 {
+  font-size: 10px;
+  color: white;
+  width: 50%;
+}
+
+.info h2 {
+  color: white;
+  font-size: 1.2rem;
 }
