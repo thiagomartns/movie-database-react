@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import MovieCard from "./components/MovieCard";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Movie from './pages/Movie'
+import Search from './pages/Search'
 
 const moviesURL = 'https://api.themoviedb.org/3/movie/';
 const apiKey = 'api_key=71059a79f76b6567e98ec1b3fce847c3'
@@ -25,21 +28,17 @@ function App() {
   }, [])
 
   return (
-    <div className="app-container">
-      <nav className="menu-nav">
-        <div className="searchbar">
-          <input type="text" placeholder="Search" />
-        </div>
-      </nav>
-      <main className="feed">
-        <h1 className="feed-container-title">
-          TMDB's Favourites Movies
-        </h1>
-        <div className="feed-container">
-          <MovieCard topMovies={topRatedMovies} url={imgUrl}/>
-        </div>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        
+        <Route exact path="/" element={<Home topMovies={topRatedMovies} url={imgUrl}/>} />
+
+        <Route path="movie/:id" element={<Movie />} />
+
+        <Route path="search" element={<Search />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
