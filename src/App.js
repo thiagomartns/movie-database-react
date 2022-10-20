@@ -32,6 +32,9 @@ function App() {
         </div>
       </nav>
       <main className="feed">
+        <h1 className="feed-container-title">
+          TMDB's Favourites Movies
+        </h1>
         <div className="feed-container">
           <MovieCard topMovies={topRatedMovies} url={imgUrl}/>
         </div>

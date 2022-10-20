@@ -37,6 +37,12 @@
   background-color: var(--purple);
 }
 
+.feed .feed-container-title {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
 .feed-container {
   display: flex;
   flex-wrap: wrap;
